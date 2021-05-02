@@ -42,49 +42,80 @@ html, body {
     flex: 1;
 }
 
-.container > div > h2 {
+.container > div > div {
+    margin: .7em 1.8em;
+}
+
+.car-icon > img {
+    height: 1.2em;
+}
+
+.car-type > h2 {
     font-family: var(--big-shoulders-display);
     text-transform: uppercase;
     color: var(--very-light-gray);
 }
 
-.container > div > p {
+.description > p {
     font-family: var(--lexend-deca);
     color: var(--transparent-white);
-    font-size: .65em;
+    font-size: .6em;
 }
 
-.container > div > button {
+.btn > a {
+    text-decoration: none;
+    display: inline-block;
+    padding: .8em 2em;
     font-family: var(--lexend-deca);
+    font-size: .6em;
     background-color: var(--very-light-gray);
-    font-size: .7em;
+    border-radius: 25px;
+    transition: 0.2s;
 }
 
-/* sedan box general styles */
+/* sedan box especific styles */
 #container-sedan {
     background-color: var(--bright-orange);
 }
 
-#container-sedan > button {
+#btn-sedan {
     color: var(--bright-orange);
 }
 
-/* suv box general styles */
+#btn-sedan:hover {
+    background: var(--bright-orange);
+    color: var(--very-light-gray);
+    border: 1px solid var(--very-light-gray);
+}
+
+/* suv box especific styles */
 #container-suv {
     background-color: var(--dark-cyan);
 }
 
-#container-suv > button {
+#btn-suv {
     color: var(--dark-cyan);
 }
 
-/* luxury box general styles */
+#btn-suv:hover {
+    background: var(--dark-cyan);
+    color: var(--very-light-gray);
+    border: 1px solid var(--very-light-gray);
+}
+
+/* luxury box especific styles */
 #container-luxury {
     background-color: var(--very-dark-cyan);
 }
 
-#container-luxury > button {
+#btn-luxury {
     color: var(--very-dark-cyan);
+}
+
+#btn-luxury:hover {
+    background: var(--very-dark-cyan);
+    color: var(--very-light-gray);
+    border: 1px solid var(--very-light-gray);
 }
 
 /* desktop resolution */
@@ -93,6 +124,36 @@ html, body {
 
     .container {
         flex-direction: row;
+        width: 65%;
+        height: 70%;
+    }
+
+    .container > div > div {
+        flex: 1;
+    }
+
+    .car-icon > img {
+        height: 2em;
+        margin-top: .8em;
+    }
+
+    .car-type > h2 {
+        font-size: 2em;
+    }
+
+    .description > p {
+        font-size: .8em;
+        line-height: 1.5em;
+    }
+
+    .btn > a {
+        font-size: .8em;
+        padding: .9em 2em;
+        margin-top: 4.5em;
+    }
+
+    .container > div > div {
+        margin: 1.5em 2.3em;
     }
 
 }
